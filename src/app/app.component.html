@@ -1,7 +1,17 @@
+<!--task one-->
 <button type="button" (click)="removeUserList()">delete</button>
-
+<div *ngIf="showUser">
   <p>{{userInfo.name}}</p>
   <p>{{userInfo.surname}}</p>
   <p>{{userInfo.age}}</p>
   <p>{{userInfo.email}}</p>
-
+</div>
+<hr/>
+<!--task two-->
+<div *ngFor="let user of users">
+  <div *ngIf="checkUserName(user)">
+   <p>{{user.name}}</p>
+   <p>{{user.login}}</p>
+   <p>{{user.password}}</p>
+  </div>
+</div>
