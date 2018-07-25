@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  userinfo = {
+  userInfo = {
     name: 'Eliza',
     surname: 'Ksajikyan',
     age: 29,
@@ -14,8 +14,6 @@ export class AppComponent {
   };
 
   removeUserList() {
-    let user = document.getElementById('user');
-    console.log(user);
-    user.parentNode.removeChild(user);
+    this.userInfo = {};
   }
 }
